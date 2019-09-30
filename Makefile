@@ -8,7 +8,6 @@ clean:
 
 .PHONY: test
 test: lint
-	nyc mocha
 
 .PHONY: lint
 lint:
