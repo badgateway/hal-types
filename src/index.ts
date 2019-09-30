@@ -8,7 +8,7 @@ export type HalLink = {
   title?: string,
   hreflang?: string,
 
-}
+};
 
 /**
  * A HAL document
@@ -23,4 +23,4 @@ export type HalResource = {
     [rel: string]: HalResource | HalResource[],
   },
 
-}
+};
