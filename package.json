@@ -1,0 +1,40 @@
+{
+  "name": "hal-types",
+  "version": "0.0.1",
+  "description": "Typescript definitions for HAL",
+  "main": "dist/index.js",
+  "browser": "browser/ketting.min.js",
+  "scripts": {
+    "test": "make test",
+    "prepublishOnly": "make build",
+    "build": "make build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evert/ketting.git"
+  },
+  "keywords": [
+    "rest",
+    "hal",
+    "hypermedia",
+    "typescript",
+    "json-hints",
+    "hal"
+  ],
+  "author": "Evert Pot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/evert/hal-types/issues"
+  },
+  "homepage": "https://github.com/evert/hal-types#readme",
+  "files": [
+    "src/",
+    "dist/"
+  ],
+  "types": "dist/index.d.ts",
+  "dependencies": {},
+  "devDependencies": {
+    "tslint": "^5.19.0",
+    "typescript": "^3.6.2"
+  }
+}
