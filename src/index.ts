@@ -9,6 +9,11 @@ export interface HalLink {
   href: string;
 
   /**
+   * Content-type of the target resource
+   */
+  type?: string;
+
+  /**
    * If set to true, the href should be interpeted as a URI-Template (RFC6570).
    */
   templated?: boolean;
