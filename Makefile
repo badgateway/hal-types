@@ -1,3 +1,5 @@
+SOURCE_FILES:=$(shell find src/ -type f -name '*.ts')
+
 .PHONY: build
 build: dist/build
 
@@ -21,6 +23,6 @@ fix:
 watch:
 	./node_modules/.bin/tsc --watch
 
-dist/build:
+dist/build: $(SOURCE_FILES)
 	./node_modules/.bin/tsc
 	touch dist/build

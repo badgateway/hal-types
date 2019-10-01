@@ -1,6 +1,11 @@
 ChangeLog
 =========
 
+0.1.2 (2019-09-30)
+------------------
+
+* Forgot to build files before publishing.
+
 0.1.1 (2019-09-30)
 ------------------
 
