@@ -46,6 +46,7 @@ export interface HalResource {
    * Each value is either a Link, or an array of Links
    */
   _links: {
+    self: HalLink,
     [rel: string]: HalLink | HalLink[];
   };
   [property: string]: any;
