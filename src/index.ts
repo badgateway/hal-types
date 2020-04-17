@@ -46,6 +46,7 @@ export interface HalResource {
    * Each value is either a Link, or an array of Links
    */
   _links: {
+    self: HalLink,
     [rel: string]: HalLink | HalLink[];
   };
   [property: string]: any;
@@ -124,7 +125,7 @@ interface LinkHints {
    * headers such as If-Modified-Since or If-Match for state-changing
    * requests such as PUT, POST, DELETE.
    */
-  'precondition-req'?: Array<'etag'|'last-modified'>;
+  'precondition-req'?: ('etag'|'last-modified')[];
 
   /**
    * A list of authentication schemes that are required at the target
