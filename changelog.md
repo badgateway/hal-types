@@ -1,6 +1,13 @@
 ChangeLog
 =========
 
+1.0.0 (2020-04-16)
+------------------
+
+* Stable release
+* The 'self' link should always appear on a HAL resource, and only ever once.
+
+
 0.1.2 (2019-09-30)
 ------------------
 
