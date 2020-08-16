@@ -65,7 +65,7 @@ export interface HalResource {
  *
  * See: https://tools.ietf.org/html/draft-nottingham-link-hint
  */
-interface LinkHints {
+export interface LinkHints {
 
   /**
    * List of HTTP methods that can be used on the target
