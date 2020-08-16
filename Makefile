@@ -13,11 +13,11 @@ test: lint
 
 .PHONY: lint
 lint:
-	node_modules/.bin/tslint -c tslint.json --project tsconfig.json 'src/**/*.ts' 'test/**/*.ts'
+	node_modules/.bin/eslint --quiet 'src/*.ts'
 
 .PHONY: fix
 fix:
-	node_modules/.bin/tslint -c tslint.json --project tsconfig.json 'src/**/*.ts' 'test/**/*.ts' --fix
+	node_modules/.bin/eslint --quiet 'src/*.ts' --fix
 
 .PHONY: watch
 watch:

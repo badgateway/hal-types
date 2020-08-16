@@ -1,15 +1,13 @@
 {
     "compilerOptions": {
         "module": "commonjs",
-        "target": "es2017",
-        "noImplicitAny": true,
+        "esModuleInterop": true,
+        "target": "es2019",
 
-        "strictFunctionTypes": true,
-        "noImplicitThis": true,
-        "alwaysStrict": true,
-        "noUnusedLocals": true,
-        "noImplicitReturns": true,
+        "strict": true,
         "noFallthroughCasesInSwitch": true,
+        "experimentalDecorators": true,
+        "noUnusedLocals": true,
 
         "moduleResolution": "node",
         "sourceMap": true,
@@ -26,9 +24,8 @@
           "ES2015",
           "ES2016",
           "ES2017",
-          "DOM.Iterable"
+          "ESNext.bigint"
         ],
-
         "declaration": true
     },
     "include": [
