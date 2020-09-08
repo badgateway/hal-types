@@ -1,6 +1,12 @@
 ChangeLog
 =========
 
+1.2.1 (2020-09-07)
+------------------
+
+* Exporting `HalFormsTemplate` and `HalFormsProperty`
+
+
 1.2.0 (2020-09-07)
 ------------------
 
