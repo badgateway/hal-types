@@ -1,6 +1,13 @@
 ChangeLog
 =========
 
+1.2.0 (2020-09-07)
+------------------
+
+* Added support for 'Hal Forms'. See https://rwcbook.github.io/hal-forms/ for
+  details.
+
+
 1.1.0 (2020-08-15)
 ------------------
 
