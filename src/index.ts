@@ -58,6 +58,17 @@ export interface HalResource {
     [rel: string]: HalResource | HalResource[];
   };
 
+  /**
+   * HAL-FORMS
+   */
+  _templates?: {
+
+    /**
+     * Default form. The only valid value is 'default'
+     */
+    default: HalFormsTemplate
+  };
+
 }
 
 /**
@@ -178,5 +189,84 @@ interface LinkHintAuthScheme {
    * attribute on the WWW-Authentication header.
    */
   realm?: string;
+
+}
+
+/**
+ * HAL-Forms Template.
+ *
+ * @see http://rwcbook.github.io/hal-forms/
+ */
+interface HalFormsTemplate {
+  /**
+   * Mime-type for the form.
+   *
+   * If omitted, application/json should be assumed
+   */
+  contentType?: string;
+  
+  /**
+   * HTTP Method
+   */
+  method: string;
+
+  /**
+   * List of properties in this HAL Form.
+   *
+   * If this is not set, the implication is that there are no properties.
+   */
+  properties?: HalFormsProperty[]
+
+  /**
+   * Human-readable title for the form
+   */
+  title?: string;
+}
+
+/**
+ * HAL-Forms property
+ *
+ * This type describes a single field in HAL-Forms
+ */
+interface HalFormsProperty {
+
+  /**
+   * Name of the form field
+   */
+  name: string;
+
+  /**
+   * Human-readable label for the field
+   */
+  prompt?: string;
+
+  /**
+   * Is the field read-only?
+   */
+  readOnly?: boolean;
+
+  /**
+   * Regular expression for validation the input
+   */
+  regex?: string;
+
+  /**
+   * Is this a required field?
+   *
+   * Defaults to false.
+   */
+  required?: boolean;
+
+  /**
+   * Whether the value element contains a URI Template.
+   *
+   * Defaults to false.
+   */
+  templated?: boolean;
+
+  /**
+   * Default or pre-existing value for the field
+   */
+  value?: string;
 
 }
