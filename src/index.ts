@@ -197,7 +197,7 @@ interface LinkHintAuthScheme {
  *
  * @see http://rwcbook.github.io/hal-forms/
  */
-interface HalFormsTemplate {
+export interface HalFormsTemplate {
   /**
    * Mime-type for the form.
    *
@@ -228,7 +228,7 @@ interface HalFormsTemplate {
  *
  * This type describes a single field in HAL-Forms
  */
-interface HalFormsProperty {
+export interface HalFormsProperty {
 
   /**
    * Name of the form field
