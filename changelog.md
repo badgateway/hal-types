@@ -1,6 +1,14 @@
 ChangeLog
 =========
 
+1.3.0 (2020-12-17)
+------------------
+
+* Update to Hal-Forms 2020-12-13, which adds support for a `target` attribute
+  on forms, and `placeholder`, `min`, `max`, `step`, `minLength`, `maxLength`
+  on properties.
+
+
 1.2.1 (2020-09-07)
 ------------------
 

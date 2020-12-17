@@ -221,6 +221,11 @@ export interface HalFormsTemplate {
    * Human-readable title for the form
    */
   title?: string;
+
+  /**
+   * Default destination endpoint for the form.
+   */
+  target?: string;
 }
 
 /**
@@ -268,5 +273,49 @@ export interface HalFormsProperty {
    * Default or pre-existing value for the field
    */
   value?: string;
+
+  /**
+   * Equivalent of the HTML placeholder attribute.
+   *
+   * Shows a default value in a form control before the user entered any value.
+   * This value disappears immediately after a user starts typing.
+   */
+  placeHolder?: string;
+
+  /**
+   * Minimum value for the property.
+   *
+   * Useful for things like numbers and dates.
+   */
+  min?: number;
+
+  /**
+   * Maximum value for the property.
+   *
+   * Useful for things like numbers and dates.
+   */
+  max?: number;
+
+  /**
+   * Step value.
+   *
+   * For example, if set to 10 this will enforce that the value can only be a
+   * multiple of 10.
+   */
+  step?: number;
+
+  /**
+   * Minimum length for he value.
+   *
+   * Useful for string values.
+   */
+  minLength?: number;
+
+  /**
+   * Maximum value for the property.
+   *
+   * Useful for string values.
+   */
+  maxLength?: number;
 
 }
