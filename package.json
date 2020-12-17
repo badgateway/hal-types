@@ -1,6 +1,6 @@
 {
   "name": "hal-types",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "Typescript definitions for HAL",
   "main": "dist/index.js",
   "browser": "browser/ketting.min.js",
