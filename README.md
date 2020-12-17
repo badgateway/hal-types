@@ -11,7 +11,7 @@ It exports the following interfaces:
    `_links` property and optionally `_embedded` property and `_templates` properties.
 3. `LinkHints`, an extension to links, as defined in [draft-nottingham-link-hint][3].
 4. `HalFormsTemplate`, A [HAL Forms][4] template object.
-5. `halFormsProperty` A single property from a HAL Form.
+5. `HalFormsProperty` A single property from a HAL Form.
 
 [1]: https://tools.ietf.org/html/draft-kelly-json-hal-00#section-5
 [2]: https://tools.ietf.org/html/draft-kelly-json-hal-00#section-4
