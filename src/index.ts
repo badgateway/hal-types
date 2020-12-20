@@ -246,9 +246,12 @@ export interface HalFormsProperty {
   prompt?: string;
 
   /**
-   * Is the field read-only?
+   * The property type.
+   *
+   * If not specified, this should default to 'text'.
+   * This list corresponds with HTML5 input types.
    */
-  readOnly?: boolean;
+  type?: 'hidden' | 'text' | 'search' | 'tel' | 'url' | 'email' | 'password' | 'date' | 'month' | 'week' | 'time' | 'datetime-local' | 'number' | 'range' | 'color',
 
   /**
    * Regular expression for validation the input
@@ -261,6 +264,11 @@ export interface HalFormsProperty {
    * Defaults to false.
    */
   required?: boolean;
+
+  /**
+   * Is the field read-only?
+   */
+  readOnly?: boolean;
 
   /**
    * Whether the value element contains a URI Template.
