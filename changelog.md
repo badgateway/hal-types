@@ -1,6 +1,13 @@
 ChangeLog
 =========
 
+1.4.0 (2020-12-20)
+------------------
+
+* Update to HAL-Forms 2020-12-17, which adds support for a `type` attribute on
+  properties, similar to the HTML `type` attribute.
+
+
 1.3.0 (2020-12-17)
 ------------------
 
