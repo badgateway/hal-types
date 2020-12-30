@@ -33,19 +33,16 @@
           }
       ],
       "semi": ["error", "always"],
-      "no-unused-vars": ["error",
-          {
-            "args": "none",
-            "ignoreRestSiblings": true
-          }
-        ],
-      "@typescript-eslint/no-inferrable-types": 0,
+      "no-trailing-spaces": "error",
+      "eol-last": "error",
+      "@typescript-eslint/no-inferrable-types": "off",
       "@typescript-eslint/ban-ts-comment": ["error",
         {
           "ts-expect-error": "allow-with-description"
         }
       ],
       "@typescript-eslint/no-explicit-any" : 0,
-      "@typescript-eslint/no-this-alias": 0
+      "@typescript-eslint/no-unused-vars": ["error"],
+      "no-console": ["error"]
   }
 }

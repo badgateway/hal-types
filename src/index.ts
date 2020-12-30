@@ -204,7 +204,7 @@ export interface HalFormsTemplate {
    * If omitted, application/json should be assumed
    */
   contentType?: string;
-  
+
   /**
    * HTTP Method
    */
