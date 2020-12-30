@@ -251,7 +251,7 @@ export interface HalFormsProperty {
    * If not specified, this should default to 'text'.
    * This list corresponds with HTML5 input types.
    */
-  type?: 'hidden' | 'text' | 'search' | 'tel' | 'url' | 'email' | 'password' | 'date' | 'month' | 'week' | 'time' | 'datetime-local' | 'number' | 'range' | 'color',
+  type?: 'hidden' | 'text' | 'search' | 'tel' | 'url' | 'email' | 'password' | 'date' | 'month' | 'week' | 'time' | 'datetime-local' | 'number' | 'range' | 'color' | 'textarea',
 
   /**
    * Regular expression for validation the input
@@ -325,5 +325,15 @@ export interface HalFormsProperty {
    * Useful for string values.
    */
   maxLength?: number;
+
+  /**
+   * For the 'textarea' type, specifies the number of columns when rendering the textarea
+   */
+  rows?: number;
+
+  /**
+   * For the 'textarea' type, specifies the number of rows when rendering the textarea
+   */
+  cols?: number;
 
 }

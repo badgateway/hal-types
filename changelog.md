@@ -1,6 +1,13 @@
 ChangeLog
 =========
 
+1.5.0 (2020-12-30)
+-----------------
+
+* Update to HAL-Forms 2020-12-29, which adds support for a `textarea` type, and
+  `cols` and `rows` fields on form fields.
+
+
 1.4.0 (2020-12-20)
 ------------------
 
