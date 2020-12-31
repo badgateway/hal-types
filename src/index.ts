@@ -337,3 +337,26 @@ export interface HalFormsProperty {
   cols?: number;
 
 }
+
+/**
+ * HAL-Hateoas Template
+ *
+ * This types describe by Hateoas
+ */
+export interface CollectionModel<T = any> extends HalResource<Array<EntityModel<T>>>{
+
+}
+
+export interface EntityModel<T = any> extends HalResource<T>{
+
+}
+
+export interface PagedModel<T = any> extends HalResource<T>{
+    "page": {
+        "size": number,
+        "totalElements": number,
+        "totalPages": number,
+        "number": number
+    }
+}
+  
