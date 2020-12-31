@@ -38,7 +38,7 @@ export interface HalLink {
 /**
  * A HAL document
  */
-export interface HalResource {
+export interface HalResource<T extends Record<string, any>> extends T {
 
   /**
    * List of links, indexed by their relationship.
@@ -49,7 +49,6 @@ export interface HalResource {
     self: HalLink,
     [rel: string]: HalLink | HalLink[];
   };
-  [property: string]: any;
 
   /**
    * Embedded resources
