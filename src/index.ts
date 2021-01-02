@@ -61,13 +61,7 @@ export interface HalResource {
   /**
    * HAL-FORMS
    */
-  _templates?: {
-
-    /**
-     * Default form. The only valid value is 'default'
-     */
-    default: HalFormsTemplate
-  };
+  _templates?: Record<string, HalFormsTemplate>,
 
 }
 
