@@ -1,6 +1,13 @@
 ChangeLog
 =========
 
+1.6.0 (2021-??-??)
+------------------
+
+* Update to HAL Forms 2020-12-31, which allows multiple Hal Forms to appear in
+  a document.
+
+
 1.5.0 (2020-12-30)
 -----------------
 
