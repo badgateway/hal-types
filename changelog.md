@@ -1,11 +1,14 @@
 ChangeLog
 =========
 
-1.6.0 (2021-??-??)
+1.6.0 (2021-01-03)
 ------------------
 
 * Update to HAL Forms 2020-12-31, which allows multiple Hal Forms to appear in
   a document.
+* HalResource is now generic, allowing users to provide a type for other
+  properties on this object. By default it's `Record<string, any>`, which makes
+  it backwards compatible.
 
 
 1.5.0 (2020-12-30)
