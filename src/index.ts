@@ -38,7 +38,7 @@ export interface HalLink {
 /**
  * A HAL document
  */
-export interface HalResource<T extends Record<string, any> = Record<string, any>> extends T {
+export type HalResource<T extends Record<string, any> = Record<string, any>> = {
 
   /**
    * List of links, indexed by their relationship.
@@ -62,7 +62,7 @@ export interface HalResource<T extends Record<string, any> = Record<string, any>
    */
   _templates?: Record<string, HalFormsTemplate>,
 
-}
+} & T;
 
 /**
  * Link hints.

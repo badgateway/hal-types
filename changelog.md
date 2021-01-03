@@ -4,7 +4,8 @@ ChangeLog
 1.6.1 (2021-01-03)
 ------------------
 
-* Re-release of v1.6.0.
+* Fix a bug in new generic `HalResource`. Current version should do what was
+  expected.
 
 
 1.6.0 (2021-01-03)
