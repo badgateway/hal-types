@@ -34,12 +34,13 @@ export interface HalFormsTemplate {
   target?: string;
 }
 
+
 /**
  * HAL-Forms property
  *
  * This type describes a single field in HAL-Forms
  */
-export interface HalFormsProperty {
+export interface HalFormsBaseProperty {
 
   /**
    * Name of the form field
@@ -57,7 +58,7 @@ export interface HalFormsProperty {
    * If not specified, this should default to 'text'.
    * This list corresponds with HTML5 input types.
    */
-  type?: 'hidden' | 'text' | 'search' | 'tel' | 'url' | 'email' | 'password' | 'date' | 'month' | 'week' | 'time' | 'datetime-local' | 'number' | 'range' | 'color' | 'textarea',
+  type?: string,
 
   /**
    * Regular expression for validation the input
@@ -96,6 +97,139 @@ export interface HalFormsProperty {
    */
   placeHolder?: string;
 
+}
+
+export type HalFormsProperty = HalFormsRangeProperty | HalFormsSimpleProperty | HalFormsTextAreaProperty;
+
+/**
+ * Basic HAL-Forms property
+ *
+ * This type describes a basic HAL forms property.
+ */
+export interface HalFormsSimpleProperty extends HalFormsBaseProperty {
+
+  /**
+   * The property type.
+   *
+   * If not specified, this should default to 'text'.
+   * This list corresponds with HTML5 input types.
+   */
+  type?: 'hidden' | 'text' | 'search' | 'tel' | 'url' | 'email' | 'password' | 'color' | 'radio' | 'checkbox',
+
+  /**
+   * Minimum length for he value.
+   *
+   * Useful for string values.
+   */
+  minLength?: number;
+
+  /**
+   * Maximum value for the property.
+   *
+   * Useful for string values.
+   */
+  maxLength?: number;
+
+  /**
+   * Options is an experimental feature.
+   *
+   * This structure is likely to change. This is for experimentation/testing purposes only!
+   */
+  options?: {
+
+    /**
+     * Allow the user to select exactly 1 value, or more than 1.
+     */
+    multiple?: false,
+
+    /**
+     * Current value of the field. This overrides value from the 'parent'.
+     */
+    selectedValues?: string|number|boolean
+
+    /**
+     * List of possible values.
+     *
+     * Only one of 'inline' or 'link' should be used.
+     */
+    inline?: Record<string, string>[] | string[],
+
+    /**
+     * If link is provided, clients should fetch the list of possible options
+     * from this external location.
+     *
+     * Only one of 'inline' or 'link' should be used.
+     */
+    link?: {
+      href: string,
+      templated?: boolean,
+      type?: string
+    }
+
+  } | {
+
+    /**
+     * Allow the user to select exactly 1 value, or more than 1.
+     */
+    multiple: true,
+
+    /**
+     * Current value of the field. This overrides value from the 'parent'.
+     */
+    selectedValues?: (string|number|boolean)[];
+
+    /**
+     * List of possible values.
+     *
+     * Only one of 'inline' or 'link' should be used.
+     */
+    inline?: Record<string, string>[] | string[],
+
+    /**
+     * If link is provided, clients should fetch the list of possible options
+     * from this external location.
+     *
+     * Only one of 'inline' or 'link' should be used.
+     */
+    link?: {
+      href: string,
+      templated?: boolean,
+      type?: string
+    }
+
+    /**
+     * If provided, this will require a minimum number of items to be selected.
+     * By default this is 0 if the property is optional, and 1 if it's required.
+     */
+    minItems?: number,
+
+    /**
+     * If provided, this will require a maximum number of items to be selected.
+     * By default, there is no upper bound.
+     */
+    maxItems?: number,
+  }
+
+}
+
+/**
+ * Range HAL-Forms property.
+ *
+ * This type describes a HAL forms fiels that is has a range, such as numbers and dates.
+ * These properties have a min, max and step property.
+ *
+ * This type describes a basic HAL forms property.
+ */
+export interface HalFormsRangeProperty extends HalFormsBaseProperty {
+
+  /**
+   * The property type.
+   *
+   * If not specified, this should default to 'text'.
+   * This list corresponds with HTML5 input types.
+   */
+  type: 'date' | 'month' | 'week' | 'time' | 'datetime-local' | 'number',
+
   /**
    * Minimum value for the property.
    *
@@ -118,19 +252,22 @@ export interface HalFormsProperty {
    */
   step?: number;
 
-  /**
-   * Minimum length for he value.
-   *
-   * Useful for string values.
-   */
-  minLength?: number;
+}
+
+/**
+ * TextArea HAL forms property
+ *
+ * This type describes a 'textarea' HAL forms field.
+ */
+export interface HalFormsTextAreaProperty extends HalFormsBaseProperty {
 
   /**
-   * Maximum value for the property.
+   * The property type.
    *
-   * Useful for string values.
+   * If not specified, this should default to 'text'.
+   * This list corresponds with HTML5 input types.
    */
-  maxLength?: number;
+  type: 'textarea',
 
   /**
    * For the 'textarea' type, specifies the number of columns when rendering the textarea
