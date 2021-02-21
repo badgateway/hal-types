@@ -1,3 +1,5 @@
+import { HalLink } from './hal';
+
 /**
  * HAL-Forms Template.
  *
@@ -135,80 +137,7 @@ export interface HalFormsSimpleProperty extends HalFormsBaseProperty {
    *
    * This structure is likely to change. This is for experimentation/testing purposes only!
    */
-  options?: {
-
-    /**
-     * Allow the user to select exactly 1 value, or more than 1.
-     */
-    multiple?: false,
-
-    /**
-     * Current value of the field. This overrides value from the 'parent'.
-     */
-    selectedValues?: string|number|boolean
-
-    /**
-     * List of possible values.
-     *
-     * Only one of 'inline' or 'link' should be used.
-     */
-    inline?: Record<string, string>[] | string[],
-
-    /**
-     * If link is provided, clients should fetch the list of possible options
-     * from this external location.
-     *
-     * Only one of 'inline' or 'link' should be used.
-     */
-    link?: {
-      href: string,
-      templated?: boolean,
-      type?: string
-    }
-
-  } | {
-
-    /**
-     * Allow the user to select exactly 1 value, or more than 1.
-     */
-    multiple: true,
-
-    /**
-     * Current value of the field. This overrides value from the 'parent'.
-     */
-    selectedValues?: (string|number|boolean)[];
-
-    /**
-     * List of possible values.
-     *
-     * Only one of 'inline' or 'link' should be used.
-     */
-    inline?: Record<string, string>[] | string[],
-
-    /**
-     * If link is provided, clients should fetch the list of possible options
-     * from this external location.
-     *
-     * Only one of 'inline' or 'link' should be used.
-     */
-    link?: {
-      href: string,
-      templated?: boolean,
-      type?: string
-    }
-
-    /**
-     * If provided, this will require a minimum number of items to be selected.
-     * By default this is 0 if the property is optional, and 1 if it's required.
-     */
-    minItems?: number,
-
-    /**
-     * If provided, this will require a maximum number of items to be selected.
-     * By default, there is no upper bound.
-     */
-    maxItems?: number,
-  }
+  options?: HalFormsOptions,
 
 }
 
@@ -279,4 +208,70 @@ export interface HalFormsTextAreaProperty extends HalFormsBaseProperty {
    */
   cols?: number;
 
+}
+
+/**
+ * HalFormsOptions is the 'options' property on fields.
+ */
+type HalFormsOptions = HalFormsOptionsDataSource & HalFormsOptionsMultiple;
+
+/**
+ * Helper type for the 'multiple' property and side-effects of it being set./
+ */
+type HalFormsOptionsMultiple = {
+  /**
+   * Allow the user to select exactly 1 value, or more than 1.
+   */
+  multiple?: false,
+
+  /**
+   * Current value of the field. This overrides value from the 'parent'.
+   */
+  selectedValues?: string|number|boolean
+} | {
+  /**
+   * Allow the user to select exactly 1 value, or more than 1.
+   */
+  multiple: true,
+
+  /**
+   * Current value of the field. This overrides value from the 'parent'.
+   */
+  selectedValues?: (string|number|boolean)[];
+
+  /**
+   * If provided, this will require a minimum number of items to be selected.
+   * By default this is 0 if the property is optional, and 1 if it's required.
+   */
+  minItems?: number;
+
+  /**
+   * If provided, this will require a maximum number of items to be selected.
+   * By default, there is no upper bound.
+   */
+  maxItems?: number;
+
+}
+
+/**
+ * Helper type for determining the data source for an 'options' property.
+ *
+ * The data source is either in-line, or fetched from an online source
+ */
+type HalFormsOptionsDataSource = {
+
+  /**
+   * List of possible values.
+   *
+   * Only one of 'inline' or 'link' should be used.
+   */
+  inline: Record<string, string>[] | [];
+} | {
+  /**
+   * If link is provided, clients should fetch the list of possible options
+   * from this external location.
+   *
+   * Only one of 'inline' or 'link' should be used.
+   */
+  link: HalLink,
 }
