@@ -157,7 +157,7 @@ export interface HalFormsRangeProperty extends HalFormsBaseProperty {
    * If not specified, this should default to 'text'.
    * This list corresponds with HTML5 input types.
    */
-  type: 'date' | 'month' | 'week' | 'time' | 'datetime-local' | 'number',
+  type: 'date' | 'month' | 'week' | 'time' | 'datetime-local' | 'number' | 'range',
 
   /**
    * Minimum value for the property.
