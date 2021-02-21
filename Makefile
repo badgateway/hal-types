@@ -1,28 +1,38 @@
 SOURCE_FILES:=$(shell find src/ -type f -name '*.ts')
 
-.PHONY: build
+.PHONY:all
+all: build
+
+.PHONY:build
 build: dist/build
 
-.PHONY: clean
-clean:
-	-rm -r browser/
-	-rm -r dist/
+.PHONY:test
+test:
+	node_modules/.bin/nyc node_modules/.bin/mocha
 
-.PHONY: test
-test: lint
-
-.PHONY: lint
+.PHONY:lint
 lint:
-	node_modules/.bin/eslint --quiet 'src/*.ts'
+	node_modules/.bin/eslint --quiet 'src/*.ts' 'test/*.ts'
 
-.PHONY: fix
+.PHONY:lint-fix
+lint-fix: fix
+
+.PHONY:fix
 fix:
-	node_modules/.bin/eslint --quiet 'src/*.ts' --fix
+	node_modules/.bin/eslint --quiet 'src/**/*.ts' 'test/**/*.ts' --fix
 
-.PHONY: watch
+.PHONY:watch
 watch:
-	./node_modules/.bin/tsc --watch
+	node_modules/.bin/tsc --watch
+
+.PHONY:start
+start: build
+
+.PHONY:clean
+clean:
+	rm -r dist
 
 dist/build: $(SOURCE_FILES)
-	./node_modules/.bin/tsc
+	node_modules/.bin/tsc
+	@# Creating a small file to keep track of the last build time
 	touch dist/build
