@@ -1,6 +1,14 @@
 ChangeLog
 =========
 
+1.7.0 (2021-02-20)
+------------------
+
+* Updated to HAL Forms 2021-02-20, which adds support for the 'options'
+  property. This property can be used to generate lists of possible values
+  in form fields, including values from external HTTP sources.
+
+
 1.6.1 (2021-01-03)
 ------------------
 
