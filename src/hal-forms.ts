@@ -305,7 +305,7 @@ export type HalFormsOptionsInline = {
    *
    * Only one of 'inline' or 'link' should be used.
    */
-  inline: Record<string, string>[] | [];
+  inline: Record<string, string>[] | string[];
 }
 /**
  * Helper type for determining the data source for an 'options' property.
