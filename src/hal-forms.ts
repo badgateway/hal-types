@@ -228,6 +228,23 @@ type HalFormsOptionsMultiple = {
    * Current value of the field. This overrides value from the 'parent'.
    */
   selectedValues?: string|number|boolean
+
+  /**
+   * If the data source is an array of objects, use this property for the
+   * label.
+   *
+   * If this is not set, 'prompt' is assumed.
+   */
+  promptField?: string;
+
+  /**
+   * If the data source is an array of objects, use this property for the
+   * value
+   *
+   * If this is not set, 'value' is assumed.
+   */
+  valueField?: string;
+
 } | {
   /**
    * Allow the user to select exactly 1 value, or more than 1.
