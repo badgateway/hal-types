@@ -1,6 +1,12 @@
 ChangeLog
 =========
 
+1.7.2 (2021-02-21)
+------------------
+
+* Add `promptField`, `valueField` properties from HAL-Forms.
+
+
 1.7.1 (2021-02-21)
 ------------------
 
