@@ -1,6 +1,12 @@
 ChangeLog
 =========
 
+1.7.3 (2021-02-21)
+------------------
+
+* Add another missing `promptField`, `valueField`.
+
+
 1.7.2 (2021-02-21)
 ------------------
 

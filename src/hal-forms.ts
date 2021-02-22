@@ -268,6 +268,22 @@ type HalFormsOptionsMultiple = {
    */
   maxItems?: number;
 
+  /**
+   * If the data source is an array of objects, use this property for the
+   * label.
+   *
+   * If this is not set, 'prompt' is assumed.
+   */
+  promptField?: string;
+
+  /**
+   * If the data source is an array of objects, use this property for the
+   * value
+   *
+   * If this is not set, 'value' is assumed.
+   */
+  valueField?: string;
+
 }
 
 /**
