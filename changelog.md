@@ -1,6 +1,17 @@
 ChangeLog
 =========
 
+1.7.1 (2021-02-21)
+------------------
+
+* Added type: range
+* Now exporting:
+  * `HalFormsSimpleProperty`
+  * `HalFormsRangeProperty`
+  * `HalFormsOptionsInline`
+  * `HalFormsOptionsLink`
+
+
 1.7.0 (2021-02-20)
 ------------------
 
