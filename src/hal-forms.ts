@@ -258,7 +258,14 @@ type HalFormsOptionsMultiple = {
  *
  * The data source is either in-line, or fetched from an online source
  */
-type HalFormsOptionsDataSource = {
+type HalFormsOptionsDataSource = HalFormsOptionsInline | HalFormsOptionsLink;
+
+/**
+ * Helper type for determining the data source for an 'options' property.
+ *
+ * The data source is either in-line, or fetched from an online source
+ */
+export type HalFormsOptionsInline = {
 
   /**
    * List of possible values.
@@ -266,7 +273,13 @@ type HalFormsOptionsDataSource = {
    * Only one of 'inline' or 'link' should be used.
    */
   inline: Record<string, string>[] | [];
-} | {
+}
+/**
+ * Helper type for determining the data source for an 'options' property.
+ *
+ * The data source is either in-line, or fetched from an online source
+ */
+export type HalFormsOptionsLink = {
   /**
    * If link is provided, clients should fetch the list of possible options
    * from this external location.
