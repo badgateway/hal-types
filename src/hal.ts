@@ -50,14 +50,14 @@ export type HalResource<T extends Record<string, any> = Record<string, any>> = {
    */
   _links?: {
     self?: HalLink,
-    [rel: string]: HalLink | HalLink[];
+    [rel: string]: HalLink | HalLink[] | undefined;
   };
 
   /**
    * Embedded resources
    */
   _embedded?: {
-    [rel: string]: HalResource | HalResource[];
+    [rel: string]: HalResource | HalResource[] | undefined;
   };
 
   /**
