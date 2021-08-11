@@ -24,7 +24,7 @@ This example shows how to create a TypeScript type for your HAL-based resource, 
 ```TypeScript
 import { HalResource, HalLink } from 'hal-types';
 
-export type ExampleResource<T extends HalResource = HalResource> = {
+export type ExampleResource = HalResource & {
   _links: {
     copyright: HalLink;
     related?: HalLink[];
@@ -41,7 +41,7 @@ export type ExampleResource<T extends HalResource = HalResource> = {
     summary: string;
     introduction: string;
   };
-} & T;
+}
 ```
 Note that the `self` link does not need to be included as this is already provided by `HalResource`.
 
