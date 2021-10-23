@@ -36,6 +36,21 @@ export interface HalLink {
    */
   hints?: LinkHints;
 
+  /**
+   * A URL that SHOULD provide further information about the resource deprecation.
+   */
+  deprecation?: string;
+
+  /**
+   * MAY be used as a secondary key for selecting Link Objects which share the same relation type.
+   */
+  name?: string
+
+  /**
+   * Its value is a string which is a URI that hints about the profile (as defined by [I-D.wilde-profile-link]) of the target resource.
+   */
+  profile?: string
+
 }
 
 /**
