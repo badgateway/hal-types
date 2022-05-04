@@ -1,6 +1,12 @@
 ChangeLog
 =========
 
+1.7.5 (2022-05-04)
+------------------
+
+* Added 'minLength' and 'maxLength' to textarea fields. (@dayre)
+
+
 1.7.4 (2021-02-21)
 ------------------
 
