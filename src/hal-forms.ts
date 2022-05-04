@@ -207,6 +207,20 @@ export interface HalFormsTextAreaProperty extends HalFormsBaseProperty {
    * For the 'textarea' type, specifies the number of rows when rendering the textarea
    */
   cols?: number;
+  
+  /**
+   * Minimum length for he value.
+   *
+   * Useful for string values.
+   */
+  minLength?: number;
+
+  /**
+   * Maximum value for the property.
+   *
+   * Useful for string values.
+   */
+  maxLength?: number;
 
 }
 
