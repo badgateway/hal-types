@@ -28,7 +28,7 @@ export interface LinkHints {
    * for a target.
    */
   links?: {
-    [rel: string]: HalLink
+    [rel: string]: HalLink;
   };
 
   /**
@@ -96,14 +96,14 @@ interface LinkHintFormats {
      * link. These both describe a schema for the format
      */
     links?: {
-      [rel: string]: HalLink
-    },
+      [rel: string]: HalLink;
+    };
 
     /**
      * If set to true, it indicates that this format is
      * deprecated
      */
-    deprecated?: boolean
+    deprecated?: boolean;
   };
 }
 

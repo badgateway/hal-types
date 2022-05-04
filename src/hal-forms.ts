@@ -23,7 +23,7 @@ export interface HalFormsTemplate {
    *
    * If this is not set, the implication is that there are no properties.
    */
-  properties?: HalFormsProperty[]
+  properties?: HalFormsProperty[];
 
   /**
    * Human-readable title for the form
@@ -60,7 +60,7 @@ export interface HalFormsBaseProperty {
    * If not specified, this should default to 'text'.
    * This list corresponds with HTML5 input types.
    */
-  type?: string,
+  type?: string;
 
   /**
    * Regular expression for validation the input
@@ -116,7 +116,7 @@ export interface HalFormsSimpleProperty extends HalFormsBaseProperty {
    * If not specified, this should default to 'text'.
    * This list corresponds with HTML5 input types.
    */
-  type?: 'hidden' | 'text' | 'search' | 'tel' | 'url' | 'email' | 'password' | 'color' | 'radio' | 'checkbox',
+  type?: 'hidden' | 'text' | 'search' | 'tel' | 'url' | 'email' | 'password' | 'color' | 'radio' | 'checkbox';
 
   /**
    * Minimum length for he value.
@@ -137,7 +137,7 @@ export interface HalFormsSimpleProperty extends HalFormsBaseProperty {
    *
    * This structure is likely to change. This is for experimentation/testing purposes only!
    */
-  options?: HalFormsOptions,
+  options?: HalFormsOptions;
 
 }
 
@@ -157,7 +157,7 @@ export interface HalFormsRangeProperty extends HalFormsBaseProperty {
    * If not specified, this should default to 'text'.
    * This list corresponds with HTML5 input types.
    */
-  type: 'date' | 'month' | 'week' | 'time' | 'datetime-local' | 'number' | 'range',
+  type: 'date' | 'month' | 'week' | 'time' | 'datetime-local' | 'number' | 'range';
 
   /**
    * Minimum value for the property.
@@ -196,7 +196,7 @@ export interface HalFormsTextAreaProperty extends HalFormsBaseProperty {
    * If not specified, this should default to 'text'.
    * This list corresponds with HTML5 input types.
    */
-  type: 'textarea',
+  type: 'textarea';
 
   /**
    * For the 'textarea' type, specifies the number of columns when rendering the textarea
@@ -207,7 +207,7 @@ export interface HalFormsTextAreaProperty extends HalFormsBaseProperty {
    * For the 'textarea' type, specifies the number of rows when rendering the textarea
    */
   cols?: number;
-  
+
   /**
    * Minimum length for he value.
    *
@@ -236,12 +236,12 @@ type HalFormsOptionsMultiple = {
   /**
    * Allow the user to select exactly 1 value, or more than 1.
    */
-  multiple?: false,
+  multiple?: false;
 
   /**
    * Current value of the field. This overrides value from the 'parent'.
    */
-  selectedValues?: string|number|boolean
+  selectedValues?: string|number|boolean;
 
   /**
    * If the data source is an array of objects, use this property for the
@@ -263,7 +263,7 @@ type HalFormsOptionsMultiple = {
   /**
    * Allow the user to select exactly 1 value, or more than 1.
    */
-  multiple: true,
+  multiple: true;
 
   /**
    * Current value of the field. This overrides value from the 'parent'.
@@ -333,5 +333,5 @@ export type HalFormsOptionsLink = {
    *
    * Only one of 'inline' or 'link' should be used.
    */
-  link: HalLink,
+  link: HalLink;
 }
