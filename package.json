@@ -7,7 +7,8 @@
   "scripts": {
     "test": "make test",
     "prepublishOnly": "make build",
-    "build": "make build"
+    "build": "make build",
+    "lint": "make lint"
   },
   "repository": {
     "type": "git",
