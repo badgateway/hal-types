@@ -1,6 +1,13 @@
 ChangeLog
 =========
 
+1.7.6 (2022-05-04)
+------------------
+
+* Fix bc-breaking change. `_links` values were marked as possibly undefined,
+  and this should never have been the case.
+
+
 1.7.5 (2022-05-04)
 ------------------
 
