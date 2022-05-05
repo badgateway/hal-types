@@ -1,6 +1,12 @@
 ChangeLog
 =========
 
+1.7.7 (2022-05-04)
+------------------
+
+* Fix a second BC breaking change. `_links` should not be omitted. If `_links`
+  may be omitted this change might be re-introduce in a major version.
+
 1.7.6 (2022-05-04)
 ------------------
 
