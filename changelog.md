@@ -1,6 +1,13 @@
 ChangeLog
 =========
 
+1.8.0 (2022-06-26)
+------------------
+
+* Add `name`, `deprecation` and `profile` properties to HAL Links. These
+  were part of the base spec and should always have been there.
+
+
 1.7.7 (2022-05-04)
 ------------------
 
