@@ -32,6 +32,30 @@ export interface HalLink {
   hreflang?: string;
 
   /**
+   * This property contains a URI that's hints about the 'profile'.
+   *
+   * @see @{link https://datatracker.ietf.org/doc/html/draft-wilde-profile-link|draft-wilde-profile-link}
+   */
+  profile?: string;
+
+  /**
+   * Name of the link
+   *
+   * This may be used as a secondary key to find a link, if there are multiple
+   * with the same relationship name.
+   */
+  name?: string;
+
+  /**
+   * If this property is present, it implies that the link is deprecated,
+   * and should no longer be used.
+   *
+   * This should be a URL pointing to a page that has more information about
+   * the deprecation.
+   */
+  deprecation?: string;
+
+  /**
    * Link hints, as defined in draft-nottingham-link-hint
    */
   hints?: LinkHints;
