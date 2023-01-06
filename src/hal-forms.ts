@@ -97,7 +97,7 @@ export interface HalFormsBaseProperty {
    * Shows a default value in a form control before the user entered any value.
    * This value disappears immediately after a user starts typing.
    */
-  placeHolder?: string;
+  placeholder?: string;
 
 }
 
