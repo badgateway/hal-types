@@ -1,6 +1,13 @@
 ChangeLog
 =========
 
+1.9.0 (2023-01-08)
+------------------
+
+* `placeholder` from HAL Forms was incorrectly cased as `placeHolder`.
+  This is fixed but could be a BC break. (@dayre)
+
+
 1.8.0 (2022-06-26)
 ------------------
 
