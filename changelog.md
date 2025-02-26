@@ -1,7 +1,7 @@
 ChangeLog
 =========
 
-2.0.0 (????-??-??)
+2.0.0 (2025-02-26)
 ------------------
 
 * Update link-hint to latest draft. The types changed in a few different
