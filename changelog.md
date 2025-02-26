@@ -6,6 +6,10 @@ ChangeLog
 
 * Update link-hint to latest draft. The types changed in a few different
   places, so if you used link-hints, this is likely a BC break for you.
+* Fixed: In hal the _links object is recommended, but optional and a HAL
+  document doesn\'t need to have a 'self' link. Both of these are corrected to
+  be optional. This is more correct, but could also be a BC break if you're
+  upgrading from v1.
 
 
 1.9.0 (2023-01-08)

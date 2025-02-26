@@ -72,8 +72,7 @@ export type HalResource<T extends Record<string, any> = Record<string, any>> = {
    *
    * Each value is either a Link, or an array of Links
    */
-  _links: {
-    self: HalLink;
+  _links?: {
     [rel: string]: HalLink | HalLink[];
   };
 
