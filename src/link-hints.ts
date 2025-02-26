@@ -17,25 +17,13 @@ export interface LinkHints {
    * List of supported formats (used in for example GET responses
    * or PUT requests
    */
-  formats?: LinkHintFormats;
-
-  /**
-   * List of links that exists at the context of the hint.
-   *
-   * This allows to specify links that exists at the target
-   * resource. For example, you might add an 'edit-form' link
-   * on a link, allowing clients to render an edit button
-   * for a target.
-   */
-  links?: {
-    [rel: string]: HalLink;
-  };
+  formats?: string[]
 
   /**
    * A list of media-types the target resource supports for
    * POST request bodies
    */
-  'accept-post'?: LinkHintFormats;
+  'accept-post'?: string[];
 
   /**
    * Array of media-types that the target resource supports for
@@ -69,9 +57,14 @@ export interface LinkHints {
 
   /**
    * A list of authentication schemes that are required at the target
-   * resource
+   * resource, for example 'Basic', 'Digest', 'Bearer'.
    */
-  'auth-schemes'?: LinkHintAuthScheme[];
+  'auth-schemes'?: string[];
+
+  /**
+   * A list of authentication realms available at the target
+   */
+  'auth-realms'?: string[];
 
   /**
    * A status for the resource.
@@ -81,30 +74,6 @@ export interface LinkHints {
    */
   status?: 'deprecated' | 'gone';
 
-}
-
-/**
- * A supported format, indexed by media type
- */
-interface LinkHintFormats {
-
-  [mediaType: string]: {
-    /**
-     * Relevant links to the format.
-     *
-     * Mainly this could contain a 'profile' or 'describedby'
-     * link. These both describe a schema for the format
-     */
-    links?: {
-      [rel: string]: HalLink;
-    };
-
-    /**
-     * If set to true, it indicates that this format is
-     * deprecated
-     */
-    deprecated?: boolean;
-  };
 }
 
 interface LinkHintAuthScheme {

@@ -1,18 +1,25 @@
 ChangeLog
 =========
 
+2.0.0 (????-??-??)
+------------------
+
+* Update link-hint to latest draft. The types changed in a few different
+  places, so if you used link-hints, this is likely a BC break for you.
+
+
 1.9.0 (2023-01-08)
 ------------------
 
-* `placeholder` from HAL Forms was incorrectly cased as `placeHolder`.
-  This is fixed but could be a BC break. (@dayre)
+* `placeholder` from HAL Forms was incorrectly cased as `placeHolder`. This is
+  fixed but could be a BC break. (@dayre)
 
 
 1.8.0 (2022-06-26)
 ------------------
 
-* Add `name`, `deprecation` and `profile` properties to HAL Links. These
-  were part of the base spec and should always have been there.
+* Add `name`, `deprecation` and `profile` properties to HAL Links. These were
+  part of the base spec and should always have been there.
 
 
 1.7.7 (2022-05-04)
@@ -20,6 +27,7 @@ ChangeLog
 
 * Fix a second BC breaking change. `_links` should not be omitted. If `_links`
   may be omitted this change might be re-introduce in a major version.
+
 
 1.7.6 (2022-05-04)
 ------------------
@@ -56,19 +64,16 @@ ChangeLog
 ------------------
 
 * Added type: range
-* Now exporting:
-  * `HalFormsSimpleProperty`
-  * `HalFormsRangeProperty`
-  * `HalFormsOptionsInline`
-  * `HalFormsOptionsLink`
+* Now exporting: * `HalFormsSimpleProperty` * `HalFormsRangeProperty` *
+  `HalFormsOptionsInline` * `HalFormsOptionsLink`
 
 
 1.7.0 (2021-02-20)
 ------------------
 
 * Updated to HAL Forms 2021-02-20, which adds support for the 'options'
-  property. This property can be used to generate lists of possible values
-  in form fields, including values from external HTTP sources.
+  property. This property can be used to generate lists of possible values in
+  form fields, including values from external HTTP sources.
 
 
 1.6.1 (2021-01-03)
@@ -89,7 +94,7 @@ ChangeLog
 
 
 1.5.0 (2020-12-30)
------------------
+------------------
 
 * Update to HAL-Forms 2020-12-29, which adds support for a `textarea` type, and
   `cols` and `rows` fields on form fields.
@@ -140,6 +145,7 @@ ChangeLog
 ------------------
 
 * Forgot to build files before publishing.
+
 
 0.1.1 (2019-09-30)
 ------------------
