@@ -1,5 +1,3 @@
-import { HalLink } from './hal';
-
 /**
  * Link hints.
  *
@@ -17,7 +15,7 @@ export interface LinkHints {
    * List of supported formats (used in for example GET responses
    * or PUT requests
    */
-  formats?: string[]
+  formats?: string[];
 
   /**
    * A list of media-types the target resource supports for
@@ -73,19 +71,5 @@ export interface LinkHints {
    * 410 status code).
    */
   status?: 'deprecated' | 'gone';
-
-}
-
-interface LinkHintAuthScheme {
-  /**
-   * A registered authenticaiton scheme such as 'Basic', 'Digest' or 'Bearer'.
-   */
-  scheme: string;
-
-  /**
-   * Realm information from the authentation scheme, similar to the "realm"
-   * attribute on the WWW-Authentication header.
-   */
-  realm?: string;
 
 }
