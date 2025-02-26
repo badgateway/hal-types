@@ -8,6 +8,7 @@ build: dist/build
 
 .PHONY:test
 test: build
+	npx tsc --noEmit
 
 .PHONY:lint
 lint:
