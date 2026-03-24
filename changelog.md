@@ -1,6 +1,13 @@
 ChangeLog
 =========
 
+3.0.0 (????-??-??)
+------------------
+
+* Align `HalFormsOptions` with the latest specification version. `HalFormsOptions#multiple` was 
+  removed. `HalFormsOptions#selectedValues` type becomes `string[]`. Single and multiple selects 
+  are now treated uniformly.
+
 2.0.0 (2025-02-26)
 ------------------
 
