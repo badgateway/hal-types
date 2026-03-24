@@ -227,48 +227,12 @@ export interface HalFormsTextAreaProperty extends HalFormsBaseProperty {
 /**
  * HalFormsOptions is the 'options' property on fields.
  */
-type HalFormsOptions = HalFormsOptionsDataSource & HalFormsOptionsMultiple;
-
-/**
- * Helper type for the 'multiple' property and side-effects of it being set./
- */
-type HalFormsOptionsMultiple = {
-  /**
-   * Allow the user to select exactly 1 value, or more than 1.
-   */
-  multiple?: false;
+type HalFormsOptions = HalFormsOptionsDataSource & {
 
   /**
    * Current value of the field. This overrides value from the 'parent'.
    */
-  selectedValues?: string|number|boolean;
-
-  /**
-   * If the data source is an array of objects, use this property for the
-   * label.
-   *
-   * If this is not set, 'prompt' is assumed.
-   */
-  promptField?: string;
-
-  /**
-   * If the data source is an array of objects, use this property for the
-   * value
-   *
-   * If this is not set, 'value' is assumed.
-   */
-  valueField?: string;
-
-} | {
-  /**
-   * Allow the user to select exactly 1 value, or more than 1.
-   */
-  multiple: true;
-
-  /**
-   * Current value of the field. This overrides value from the 'parent'.
-   */
-  selectedValues?: (string|number|boolean)[];
+  selectedValues?: string[];
 
   /**
    * If provided, this will require a minimum number of items to be selected.
