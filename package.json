@@ -1,6 +1,6 @@
 {
   "name": "hal-types",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Typescript definitions for HAL",
   "main": "dist/index.js",
   "scripts": {
