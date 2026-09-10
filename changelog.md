@@ -1,13 +1,13 @@
 ChangeLog
 =========
 
-4.0.0 (????-??-??)
+4.0.0 (2026-09-10)
 ------------------
 
-* Added `'file'` to the accepted `HalFormsSimpleProperty#type` values, so
-  file upload fields can be described. This is a BC break for code that
-  handles every `type` value exhaustively, such as a `switch` with a `never`
-  check or a `Record` keyed on the union: it must now handle `'file'`.
+* Added `'file'` to the accepted `HalFormsSimpleProperty#type` values, so file
+  upload fields can be described. This is a BC break for code that handles
+  every `type` value exhaustively, such as a `switch` with a `never` check or a
+  `Record` keyed on the union: it must now handle `'file'`.
 
 
 3.0.0 (2026-03-24)
