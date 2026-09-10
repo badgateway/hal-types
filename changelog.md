@@ -1,6 +1,15 @@
 ChangeLog
 =========
 
+4.0.2 (2026-09-10)
+------------------
+
+* Version 4.0.1 was never published to npm either. The publish workflow now
+  runs on Node 24, whose npm supports trusted publishing.
+* Removed the stale `browser` field from `package.json` and pointed the
+  repository, bugs and homepage URLs at badgateway/hal-types.
+
+
 4.0.1 (2026-09-10)
 ------------------
 
