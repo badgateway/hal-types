@@ -116,7 +116,7 @@ export interface HalFormsSimpleProperty extends HalFormsBaseProperty {
    * If not specified, this should default to 'text'.
    * This list corresponds with HTML5 input types.
    */
-  type?: 'hidden' | 'text' | 'search' | 'tel' | 'url' | 'email' | 'password' | 'color' | 'radio' | 'checkbox';
+  type?: 'hidden' | 'text' | 'search' | 'tel' | 'url' | 'email' | 'password' | 'color' | 'radio' | 'checkbox' | 'file';
 
   /**
    * Minimum length for he value.
