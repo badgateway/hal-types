@@ -1,7 +1,7 @@
 ChangeLog
 =========
 
-4.0.1 (????-??-??)
+4.0.1 (2026-09-10)
 ------------------
 
 * Version 4.0.0 was never published to npm, because the publish workflow
